@@ -1,0 +1,88 @@
+name: Build and Deploy
+
+trigger:
+- main
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: DotnetPackageAndPublishArtifacts
+    displayName: Maven Package and Publish Artifacts
+    pool:
+      vmImage: 'windows-latest'
+
+    steps:
+    - task: SonarCloudPrepare@1
+      inputs:
+        SonarCloud: 'SonarCloud'
+        organization: 'bancoctt'
+        scannerMode: 'MSBuild'
+        projectKey: 'bcct-azfun-pipelines-analyzer'
+        projectName: 'BCTT - Analyzers - bcct-azfun-pipelines-analyzer'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore Solution'
+      inputs:
+        command: 'restore'
+        projects: '$(solution)'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build Solution'
+      inputs:
+        command: 'build'
+        projects: '$(solution)'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Test Solution'
+      inputs:
+        command: 'test'
+        arguments: '--blame --collect:"Code Coverage"'
+        publishTestResults: true
+        projects: '$(solution)'
+      continueOnError: true
+
+    - task: SonarCloudAnalyze@1
+      inputs:
+        jdkversion: 'JAVA_HOME_11_X64'
+
+    - task: SonarCloudPublish@1
+      inputs:
+        pollingTimeoutSec: '300'
+
+    - task: DotNetCoreCLI@2
+      displayName: Publish
+      inputs:
+        command: publish
+        projects: '$(solution)'
+        publishWebProjects: false
+        arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+        zipAfterPublish: True
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
+      condition: succeededOrFailed()
+
+# - stage: Deploy
+#   displayName: Deploy stage
+#   dependsOn: Build
+#   condition: succeeded()
+#   jobs:
+#   - deployment: DeployLinuxWebApp
+#     displayName: Deploy Linux Web App
+#     environment: 'production'
+#     pool:
+#       vmImage: 'ubuntu-latest'
+#     strategy:
+#       runOnce:
+#         deploy:
+#           steps:
+#           - task: AzureWebApp@1
+#             displayName: 'Azure Web App Deploy'
+#             inputs:
+#               azureSubscription: $(serviceConnection)
+#               appType: webAppLinux
+#               appName: '$(webAppName)'
+#               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'

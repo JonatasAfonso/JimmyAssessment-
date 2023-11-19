@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{438CB155-F719-49EB-B85A-591586B3DC05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Application", "1 - Application\CarReservation.Application\CarReservation.Application.csproj", "{E2A1CC0D-694B-48B5-B5BD-A4047C5B6725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Application.Tests", "1 - Application\CarReservation.Application.Tests\CarReservation.Application.Tests.csproj", "{DB4442B0-51DB-4662-B86C-47F3931A6DE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{4A6170EA-D09C-4FC8-AD53-F483D500B4BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Domain", "2 - Domain\CarReservation.Domain\CarReservation.Domain.csproj", "{B7A7BCE8-3DC2-408A-A023-6F9AD4469C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Domain.Tests", "2 - Domain\CarReservation.Domain.Tests\CarReservation.Domain.Tests.csproj", "{3A995EB6-3F85-476D-907E-CE29E3717CA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{6CEEA8B8-89A4-4F97-BCA2-69598843152A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Service", "3 - Service\CarReservation.Service\CarReservation.Service.csproj", "{8AF2BB09-AAD2-4D61-A046-49BA46A835FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Service.Tests", "3 - Service\CarReservation.Service.Tests\CarReservation.Service.Tests.csproj", "{57B82BEF-8584-4FF1-892F-042F6899671F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{7C5519B4-7134-4C4C-92E7-61535C8E4204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Infrastructure", "4 - Infrastructure\CarReservation.Infrastructure\CarReservation.Infrastructure.csproj", "{CFB2D72A-9669-49D2-8FC4-9C314A8D95A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarReservation.Infrastructure.Tests", "4 - Infrastructure\CarReservation.Infrastructure.Tests\CarReservation.Infrastructure.Tests.csproj", "{FB4AA4B8-ACD4-4B3C-8084-FFCC5E035E58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2A1CC0D-694B-48B5-B5BD-A4047C5B6725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A1CC0D-694B-48B5-B5BD-A4047C5B6725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A1CC0D-694B-48B5-B5BD-A4047C5B6725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A1CC0D-694B-48B5-B5BD-A4047C5B6725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4442B0-51DB-4662-B86C-47F3931A6DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4442B0-51DB-4662-B86C-47F3931A6DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4442B0-51DB-4662-B86C-47F3931A6DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4442B0-51DB-4662-B86C-47F3931A6DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A7BCE8-3DC2-408A-A023-6F9AD4469C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A7BCE8-3DC2-408A-A023-6F9AD4469C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A7BCE8-3DC2-408A-A023-6F9AD4469C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A7BCE8-3DC2-408A-A023-6F9AD4469C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A995EB6-3F85-476D-907E-CE29E3717CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A995EB6-3F85-476D-907E-CE29E3717CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A995EB6-3F85-476D-907E-CE29E3717CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A995EB6-3F85-476D-907E-CE29E3717CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF2BB09-AAD2-4D61-A046-49BA46A835FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF2BB09-AAD2-4D61-A046-49BA46A835FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF2BB09-AAD2-4D61-A046-49BA46A835FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF2BB09-AAD2-4D61-A046-49BA46A835FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B82BEF-8584-4FF1-892F-042F6899671F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B82BEF-8584-4FF1-892F-042F6899671F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B82BEF-8584-4FF1-892F-042F6899671F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B82BEF-8584-4FF1-892F-042F6899671F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB2D72A-9669-49D2-8FC4-9C314A8D95A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB2D72A-9669-49D2-8FC4-9C314A8D95A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB2D72A-9669-49D2-8FC4-9C314A8D95A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB2D72A-9669-49D2-8FC4-9C314A8D95A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB4AA4B8-ACD4-4B3C-8084-FFCC5E035E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB4AA4B8-ACD4-4B3C-8084-FFCC5E035E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB4AA4B8-ACD4-4B3C-8084-FFCC5E035E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB4AA4B8-ACD4-4B3C-8084-FFCC5E035E58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2A1CC0D-694B-48B5-B5BD-A4047C5B6725} = {438CB155-F719-49EB-B85A-591586B3DC05}
+		{DB4442B0-51DB-4662-B86C-47F3931A6DE1} = {438CB155-F719-49EB-B85A-591586B3DC05}
+		{B7A7BCE8-3DC2-408A-A023-6F9AD4469C44} = {4A6170EA-D09C-4FC8-AD53-F483D500B4BD}
+		{3A995EB6-3F85-476D-907E-CE29E3717CA6} = {4A6170EA-D09C-4FC8-AD53-F483D500B4BD}
+		{8AF2BB09-AAD2-4D61-A046-49BA46A835FE} = {6CEEA8B8-89A4-4F97-BCA2-69598843152A}
+		{57B82BEF-8584-4FF1-892F-042F6899671F} = {6CEEA8B8-89A4-4F97-BCA2-69598843152A}
+		{CFB2D72A-9669-49D2-8FC4-9C314A8D95A1} = {7C5519B4-7134-4C4C-92E7-61535C8E4204}
+		{FB4AA4B8-ACD4-4B3C-8084-FFCC5E035E58} = {7C5519B4-7134-4C4C-92E7-61535C8E4204}
+	EndGlobalSection
+EndGlobal

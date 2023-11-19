@@ -1,0 +1,1 @@
+Application layer: responsible for the main project, because that is where the API drivers and Infrastructures will be developed. It has the function of receiving all requests and directing them to some Infrastructure to perform a certain action 

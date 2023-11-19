@@ -1,0 +1,1 @@
+Domain layer: responsible for implementing classes/models, which will be mapped to the database, in addition to obtaining the declarations of interfaces, constants, DTOs (Data Transfer Object) and enums 
